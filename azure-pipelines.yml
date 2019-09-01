@@ -17,6 +17,12 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(agent.builddirectory)/s/bin/Release/netcoreapp2.1'
+    SourceFolder: '$(agent.builddirectory)/s/EADemoApp/bin/Release/netcoreapp2.1/'
     Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)/appdir'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
