@@ -6,8 +6,7 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'GeninPool2'
+pool: 'GeninPool2'
 
 variables:
   buildConfiguration: 'Release'
