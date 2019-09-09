@@ -20,7 +20,7 @@ steps:
     Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)/appdir'
 
-- task: PublishBuildArtifacts@1
+- task: PublishBuildArtifacts@2
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
