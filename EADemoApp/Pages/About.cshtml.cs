@@ -12,7 +12,7 @@ namespace EADemoApp.Pages
 
         public void OnGet()
         {
-            Message = "Your application description page for the Google Auth.";
+            Message = "Your application description page for the Google Auth";
         }
     }
 }
