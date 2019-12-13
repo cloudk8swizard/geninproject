@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 variables:
   buildConfiguration: 'Release'
@@ -23,7 +23,6 @@ steps:
     TargetFolder: '$(Build.ArtifactStagingDirectory)/appdir'
 
 
-
 - task: DotNetCoreCLI@2
   displayName: Publish
   inputs:
@@ -34,13 +33,13 @@ steps:
 
 
 - task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
+  inputs:    
     testAssemblyVer2: |
-      **\*test*.dll
-      **\Selenium*.dll
+      **\*Selenium*.dll
+      **\*test*.dll      
       !**\*TestAdapter.dll
       !**\obj\**    
+    searchFolder: '$(System.DefaultWorkingDirectory)'
     uiTests: true
 
 
