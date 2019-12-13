@@ -22,6 +22,8 @@ steps:
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/appdir'
 
+
+
 - task: DotNetCoreCLI@2
   displayName: Publish
   inputs:
@@ -29,6 +31,18 @@ steps:
     publishWebProjects: True
     arguments: '--configuration $(buildConfiguration) --output $(build.ArtifactStagingDirectory)'
     zipAfterPublish: True
+
+
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      **\Selenium*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**    
+    uiTests: true
+
 
 - task: PublishBuildArtifacts@1
   inputs:
