@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "676e89e2-6c11-4c96-8a99-635b343ffddf"
+        },
+        "name": {
+            "value": "qa-template"
+        },
+        "location": {
+            "value": "West US 2"
+        },
+        "hostingEnvironment": {
+            "value": ""
+        },
+        "hostingPlanName": {
+            "value": "ASP-rgdevops-8ad9"
+        },
+        "serverFarmResourceGroup": {
+            "value": "rg-devops"
+        },
+        "alwaysOn": {
+            "value": true
+        },
+        "sku": {
+            "value": "Standard"
+        },
+        "skuCode": {
+            "value": "S1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "currentStack": {
+            "value": "dotnetcore"
+        },
+        "errorLink": {
+            "value": "https://qa-template.scm.azurewebsites.net/detectors"
+        }
+    }
+}
