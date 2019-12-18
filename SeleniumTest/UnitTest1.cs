@@ -22,7 +22,7 @@ namespace Tests
             //driver = new InternetExplorerDriver(dir,options);
             driver = new ChromeDriver(dir);
             
-            driver.Navigate().GoToUrl("http://localhost");
+            driver.Navigate().GoToUrl("http://localhost:81");
         }
 
         [Test]
