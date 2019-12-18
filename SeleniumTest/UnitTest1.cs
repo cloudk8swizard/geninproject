@@ -19,7 +19,7 @@ namespace Tests
             var dir = AppDomain.CurrentDomain.BaseDirectory;
             //InternetExplorerOptions options = new InternetExplorerOptions();
             //options.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
-            //driver = new InternetExplorerDriver(dir,options);
+            //driver = new InternetExplorerDriver(dir,options); 
             driver = new ChromeDriver(dir);
             
             driver.Navigate().GoToUrl("http://localhost:81");
