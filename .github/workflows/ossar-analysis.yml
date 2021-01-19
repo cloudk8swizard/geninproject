@@ -8,6 +8,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  schedule:
+    - cron: '0 15 * * 2'
 
 jobs:
   OSSAR-Scan:
