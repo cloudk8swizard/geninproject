@@ -54,5 +54,5 @@ jobs:
         uses: Azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZ_WA_EADEMOAPP_GHREPO_PUBLISH_PROFILE }}
+          publish-profile: ${{ secrets.AZ_WA_EADEMOAPP_GHACTION_PUBLISH_PROFILE }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp
