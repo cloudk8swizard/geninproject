@@ -39,9 +39,7 @@ jobs:
           echo "wa-eademoapp variable: ${AZURE_WEBAPP_NAME}"             
       
       - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v1.7.2
-        with:
-          dotnet-version: '3.1.301'
+        uses: actions/setup-dotnet@v1.8.1   
       
       - name: Install .Net Core Dependencies
         run: dotnet restore 
